@@ -1,0 +1,52 @@
+<ion-view title="Device Request Form">
+ <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-chevron-left" ng-click="gobacs()"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-paper-airplane" ng-click="device_submit()"></button>
+  </ion-nav-buttons>
+  <ion-content class="request_form">
+    <ion-list>
+      <div class="list list-inset">
+		<div class="product">
+			<img src="{{Image}}" width="34px" height="67px" />
+			<h1>{{Devicename}}</h1>
+		</div>
+		  <span class="input-label">Date</span>
+		  <label class="item item-input">
+	         <span class="calender-icon"></span>
+			 <input type="text" placeholder="" ng-model="datepicker" name="datepicker" ng-click="opendateModal()">
+	       </label>
+          <span class="input-label">Employee Name</span>
+          <label class="item item-input">
+		  <button class="button button-icon employee-icon"></button>
+            <input type="text" placeholder="Name" value="{{empamesend}}">
+          </label>
+        <div class="timer">
+          <div>
+            <span class="input-label">Start Time</span>
+            <label class="item item-input" ion-datetime-picker time am-pm seconds id="startTime"  ng-model="$parent.startTime" >
+              <button class="button button-icon clock-icon"></button>
+              <input type="text" placeholder="" id="startTimes" value="{{startTime| date: 'h:mm:ss a'}}" >
+              <!-- <p>{{startTime| date: "h:mm:ss a"}}</p> -->
+            </label>
+          </div>
+          <div>
+            <span class="input-label">Stop Time</span>
+            <label class="item item-input" ion-datetime-picker time am-pm seconds id="endTime" ng-model="$parent.endTime" >
+              <button class="button button-icon clock-icon"></button>
+              <input type="text" placeholder="" id="endtimes" value="{{endTime| date: 'h:mm:ss a'}}" >
+              <!-- <p>{{endTime| date: "h:mm:ss a"}}</p> -->
+            </label>
+          </div>
+        </div>
+        <div class="emptyspace"></div>
+		<div class="buttons request_device">
+            <button class="button button-block button-positive" ng-click="device_submit()">Submit</button>
+		</div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
+
+

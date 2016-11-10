@@ -1,0 +1,35 @@
+<ion-view hide-nav-bar="true" can-swipe-back="false">
+    <ion-content class="padding login">
+        <div class="logo">
+            <img src="img/logo_device.png">
+        </div>
+        <div class="list list-inset">
+            <label class="item item-input">
+                <input type="email" placeholder="Email/ User Name " ng-model="$parent.email">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="*******" ng-model="$parent.password">
+            </label>
+        </div>
+        <div class="link_arrow">
+            <a href="#"><img class="arrow_left" src="img/arrow_left.png" /></a>
+            <a ng-click="login()"><img src="img/arrow_right.png" /></a>
+        </div>
+        <button class="button button-block button-positive forgot" ng-click="showForgotPopup()">Forgot Password?</button>
+        <div class="social">
+            <button class="button button-block button-positive floatleft" ng-click="facebook()">Facebook</button>
+            <button class="button button-block button-positive floatright" ng-click="open_signup_menu()">Create Account</button>
+            <!-- <button class="button button-block button-positive floatright" ng-click="google()">Google</button> -->
+        </div>
+        <!-- <div class="clear">
+            <div class="buttons signup">
+                <button ng-click="open_signup_menu()">Create Account</button>
+            </div>
+        </div> -->
+        <!-- <div class="clear">
+      <div class="buttons signup">
+       <button  ng-click="forg()">Clearlog</button>
+      </div>
+    </div> -->
+    </ion-content>
+</ion-view>

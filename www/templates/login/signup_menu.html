@@ -1,0 +1,36 @@
+<ion-modal-view class="menu_bottom">
+  <ion-content class="padding bottom_menu">
+   <form name="myForm" novalidate>
+  <div class="arrow">
+	<img src="img/red_arrow.png" ng-click="close_signup_menu()">
+	<span>Create Account</span>
+  </div>
+	 <div class="list list-inset">
+		 <span class="input-label">Name</span>
+          <label class="item item-input">
+			<input type="text" placeholder="Name" ng-model="signup.userName" required>
+		  </label>
+		  <span class="input-label">Email(UserName)</span>
+          <label class="item item-input">
+			<input type="email" placeholder="xxx@gmail.com" name="useremail" ng-minlength="5" ng-model="signup.userEmail" required>
+		  </label>
+		  <span class="input-label">Password</span>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" name="password" ng-minlength="6" ng-model="signup.userPwd" required>
+          </label>
+      </div>
+
+       <div class="padding">
+            <p ng-show="myForm.useremail.$error.required">* Email is required</p>
+            <p ng-show="myForm.useremail.$invalid && !myForm.useremail.$pristine">* Username must be an email address</p>
+            <p ng-show="myForm.useremail.$error.minlength">* Username must be longer than 5 characters</p>
+            <p ng-show="myForm.password.$error.required">* Password is required</p>
+            <p ng-show="myForm.password.$error.minlength">* Password must be longer than 6 characters</p>
+        </div>
+
+      <div class="padding">
+      <button class="button button-block button-positive" ng-disabled="myForm.$invalid" ng-click="adduser(signup)">Sign In</button>
+      </div>
+     </form>
+ </ion-content>
+</ion-modal-view>

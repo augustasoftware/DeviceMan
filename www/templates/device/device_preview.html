@@ -1,0 +1,53 @@
+<ion-view view-title="Selected Device" class="device_preview">
+	<ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-chevron-left" ng-click="goback()"></button>
+  </ion-nav-buttons>
+	<ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-checkmark"  ng-click="selectdevice()"></button>
+  </ion-nav-buttons>
+  
+	<ion-content class="request_form approved_device">
+	<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div class="box blue"><img src="{{Image}}" /></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box yellow"><img src="{{Image}}" /></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box pink"><img src="{{Image}}" /></div>
+  </ion-slide>
+</ion-slide-box>
+<div class="tab-function">
+	<ul class="tabs">
+        <li class="labels">
+            <label for="tab1" id="label1"><img src="img/setting_icon.png" /></label>
+            <label for="tab2" id="label2"><img src="img/headphone_icon.png" /></label>
+        </li>
+        <li>
+            <input type="radio" checked name="tabs" id="tab1">
+            <div id="tab-content1" class="tab-content">
+                <h3>Features</h3>
+                <p class="bold">4.7" Retina HD display</p>
+				<p>Display with 1334-by-750 resolution</p>
+				<p class="bold">3D Touch</p>
+				<p>When you use 3D Touch, your iPhone responds with subtle taps. So not only will you see what a press can do - you’ll feel it.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="tabs" id="tab2">
+            <div id="tab-content2" class="tab-content">
+                <h3>Features</h3>
+                <p class="bold">Headphone Driver Units 30 mm</p>
+				<p>Sensitivity 102 dB/mW (Power On)</p>
+				<p class="bold">Frequency Response 5 - 22000 Hz</p>
+				<p>Maximum Power Input</p>
+            </div>
+        </li>
+    </ul>
+	<div class="buttons request_device">
+            <button class="button button-block button-positive"  ng-click="selectdevice()">Request device</button>
+	</div>
+</div>	
+ </ion-content>
+</ion-view>  

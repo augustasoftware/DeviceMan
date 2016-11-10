@@ -1,0 +1,54 @@
+
+
+  <ion-view view-title="Request Submitted" class="home" hide-back-button="true" can-swipe-back="false" hide-nav-bar="true">
+<ion-header-bar class="bar-blue">
+         <button class="button button-icon icon ion-chevron-left" ng-click="goback()"></button>
+        <h1 class="title">Pending Device(s)</h1>
+        <button class="button button-icon button-clear ion-navicon home_bar" menu-toggle="right">
+        </button>
+    </ion-header-bar>
+
+	<ion-content class="request_form approved_device">
+    <div class="device-list pendinglist" ng-repeat="list in getlist">
+      <ion-list ng-click="goto_pendingpage(list.id,list)">
+
+      <div class="pendivimg">
+        <img src="{{list.imageUrl}}" width="34px" height="67px" />
+
+      </div>
+      <div class="product" >
+
+        <!-- <h1>{{list.userName}}</br> <span>Requested on: {{list.endTime}}</span></h1> -->
+        <h1>{{list.DeviceName}} </h1>  <br>
+        <ul>
+          <li>
+            <span>Requested on: {{list.Date}}</span>
+          </li>
+          <li>
+            <span>Time: {{list.startTime}}</span>
+          </li>
+        </ul>
+
+      </div>
+
+
+      </ion-list>
+      <button class="check_button" ng-click="approve(list.id,list)">Approve</button>
+    </div>
+
+
+
+		<!--<ion-list ng-repeat="list in getlist" >-->
+			<!--<div class="list list-inset">-->
+			<!---->
+				<!--<ion-item ng-click="goto_pendingpage(list.id,list)" >-->
+					<!--<div class="product">-->
+						<!--<img src="{{list.imageUrl}}" width="34px" height="67px" />-->
+						<!--&lt;!&ndash; <h1>{{list.userName}}</br> <span>Requested on: {{list.endTime}}</span></h1> &ndash;&gt;-->
+						<!--<h1>{{list.DeviceName}}</br> <span>Requested on: {{list.Date}}</span> <br><span>Time: {{list.startTime}}</span></h1>-->
+					<!--</div>-->
+				<!--</ion-item>-->
+			<!--</div>-->
+		<!--</ion-list>-->
+	</ion-content class="request_form">
+</ion-view>

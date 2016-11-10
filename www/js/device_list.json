@@ -1,0 +1,37 @@
+[{
+    "Id": "1",
+    "Devicename":"Apple iPhone 6s",
+    "Config": "Touch",
+    "Camera":"16MP Rear/ 3MP Front",
+    "Processor":"1.1 GHz Quad-Core Processor",
+    "Image": "img/iphone6.png"
+    
+}, {
+    "Id": "2",
+    "Devicename":"Sony",
+    "Config": "Gorilza Glass",
+    "Camera":"8MP Rear/ 4MP Front",
+    "Processor":"1.1 GHz Intel Processor",
+    "Image": "img/alcatel.png"
+}, {
+    "Id": "3",
+    "Devicename":"Asus 6",
+    "Config": "Samsung",
+    "Camera":"16MP Rear/ 3MP Front",
+    "Processor":"1.1 GHz Snapdragon Processor",
+    "Image": "img/samsung.png"
+}, {
+   "Id": "4",
+    "Devicename":"Apple iPhone 6",
+    "Config": "Sensor",
+    "Camera":"18MP Rear/ 3MP Front",
+    "Processor":"1.1 GHz Quad-Core Processor",
+    "Image": "img/iphone6.png"
+}, {
+    "Id": "5",
+    "Devicename":"Blackberry",
+    "Config": "FaceDetect",
+    "Camera":"16MP Rear/ 3MP Front",
+    "Processor":"1.1 GHz Blackberry Processor",
+    "Image": "img/samsung.png"
+}]

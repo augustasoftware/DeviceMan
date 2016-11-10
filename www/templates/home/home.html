@@ -1,0 +1,53 @@
+
+
+<ion-view view-title="Available Device(s)" class="home" hide-back-button="true" can-swipe-back="false" hide-nav-bar="true">
+  <ion-header-bar class="bar-blue">
+    <button class="button button-icon icon ion-android-home"></button>
+    <h1 class="title">Available Device(s)</h1>
+    <button class="button button-icon button-clear ion-navicon home_bar" menu-toggle="right">
+    </button>
+  </ion-header-bar>
+
+  <ion-content>
+    <!--<button  ng-click="open_menu_left()" class="sortbutton"><img src="img/sort.png" /><p>Sort Devices</p></button> -->
+    <!--  <div class="device-list" ng-repeat="list in mobilelist">
+      <ion-list ng-click="openPopover($event,list[0])">
+         <img ng-src="https://macm.saas.ibmcloud.com/{{list[8]}}">
+         <img ng-src="img/iphone6.png">
+           <ul>
+                      <h1>{{list[1]}}</h1>
+                      <li>{{list[12]}}</li>
+                      <li>{{list[16]}}</li>
+            <li>{{list[6]}}</li>
+            <li>{{list[10]}}</li>
+                </ul>
+     </ion-list>
+    </div>  -->
+
+
+    <div class="device-list" ng-repeat="list in mobilelist">
+      <ion-list ng-click="openPopover($event,list.id,list)">
+        <!-- <ion-list ng-click="showConfirm(list.Id)">  -->
+        <div class="deviceimg">
+          <img ng-src="http://66.219.96.89:9080/worklight/adapters/CaaS/asset?assetURL=/{{list.properties.Image}}">
+        </div>
+        <div class="devicdetails">
+          <h2 class="v_2"> {{list.properties.DeviceName}}</h2><br>
+          <ul>
+            <li>Display : {{list.properties.Display}}</li>
+            <li>Gps : {{list.properties.GPS}}</li>
+            <li>OS : {{list.properties.OS}}</li>
+            <li>Processor : {{list.properties.Processor}}</li>
+            <!--<li>SIM : {{list.properties.SIM}}</li>-->
+            <!--<li>Description : {{list.properties.Description}}</li>-->
+
+          </ul>
+        </div>
+
+
+        <!--  <button class="arrow_button"><img src="img/arrow_blue.png" /></button>  -->
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
+

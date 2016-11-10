@@ -1,0 +1,49 @@
+<ion-view title="Device Approved Form">
+<ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-chevron-left" ng-click="goback()"></button>
+  </ion-nav-buttons>
+  <!-- <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-information-circled" ng-click="deviceinfo()"></button>
+  </ion-nav-buttons> -->
+  <ion-content class="request_form">
+    <ion-list>
+      <div class="list list-inset">
+		<div class="product">
+			<img src={{getstatus.imageUrl}} width="34px" height="67px" />
+			<h1>{{getstatus.DeviceName}}</h1>
+		</div>
+		  <span class="input-label">Date</span>
+          <label class="item item-input">
+		   <button class="button button-icon calender-icon"></button>
+		   <input type="text" placeholder="" value="{{getstatus.Date}}">
+		  </label>
+		  <span class="input-label">Employee Name</span>
+          <label class="item item-input">
+		  <button class="button button-icon employee-icon"></button>
+		  <input type="text" placeholder="" value="{{getstatus.userName}}">
+          </label>
+		  <div class="timer">
+			<div>
+			  <span class="input-label">Start Time</span>
+			  <label class="item item-input">
+			  <button class="button button-icon clock-icon"></button>
+			  <p>{{getstatus.startTime| date: "h:mm a"}}</p>
+			 <!--  <input type="time" placeholder="" value="{{getstatus.startTime | date: "h:mm a"}}"> -->
+			  </label>
+			</div>
+			<div>
+			 <span class="input-label">Stop Time</span>
+			  <label class="item item-input">
+			  <button class="button button-icon clock-icon"></button>
+			  <p>{{getstatus.startTime| date: "h:mm a"}}</p>
+			  <!-- <input type="time" placeholder=""value="{{getstatus.endTime| date: "h:mm a"}}"> -->
+			  </label>
+			</div>
+		  </div>
+		<div class="approved">
+            <p>Status: {{(getstatus.requestformId == 2) ? "Pending" : "Approved"}}</p>
+		</div>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

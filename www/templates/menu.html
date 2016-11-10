@@ -1,0 +1,38 @@
+<ion-side-menus enable-menu-with-back-views="false" class="home_menu_right">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <!-- <ion-nav-back-button>
+      </ion-nav-back-button> -->
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right">
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/home_list" class="menu-lists">
+          Available Device(s)
+        </ion-item>
+        <ion-item menu-close href="#/app/approved_device" class="menu-lists">
+          Approved Device(s)
+        </ion-item>
+        <ion-item menu-close href="#/app/pending_request" class="menu-lists">
+          Pending Request(s)
+        </ion-item>
+        <!-- <ion-item menu-close href="#/splash" class="menu-lists">
+         Sign Out
+        </ion-item> -->
+      </ion-list>
+    </ion-content>
+     <ion-footer-bar class="bar-stable last_menu">
+      <ion-item menu-close ng-click="logout()" class="menu-lists">
+         <img src="img/arrow_signout.png" width="26px" height="26px" />Sign Out
+        </ion-item>
+    </ion-footer-bar>
+  </ion-side-menu>
+</ion-side-menus>

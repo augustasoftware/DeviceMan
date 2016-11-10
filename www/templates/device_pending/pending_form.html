@@ -1,0 +1,50 @@
+<ion-view title="Device Request Form">
+<ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-chevron-left"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-information-circled"></button>
+  </ion-nav-buttons>
+  <ion-content class="request_form pending_form">
+    <ion-list>
+      <div class="list list-inset">
+		<div class="product">
+			<img src="img/iphone6.png" width="34px" height="67px" />
+			<h1>{{Image}}</h1>
+		</div>
+		  <span class="input-label">Date</span>
+          <label class="item item-input">
+		   <button class="button button-icon calender-icon"></button>
+		   <input type="date" placeholder="" >
+		  </label>
+		  <span class="input-label">Employee Name</span>
+          <label class="item item-input">
+		  <button class="button button-icon employee-icon"></button>
+		  <input type="text" placeholder="" >
+          </label>
+		  <div class="timer">
+			<div>
+			  <span class="input-label">Start Time</span>
+			  <label class="item item-input">
+			  <button class="button button-icon clock-icon"></button>
+			  <input type="time" placeholder="" >
+			  </label>
+			</div>
+			<div>
+			 <span class="input-label">Stop Time</span>
+			  <label class="item item-input">
+			  <button class="button button-icon clock-icon"></button>
+			  <input type="time" placeholder="" >
+			  </label>
+			</div>  
+		  </div>
+		  <div class="pending">
+            <p>Status: Pending</p>
+		</div> 
+		<div class="buttons request_device">
+            <button class="button button-block button-positive"  ng-click="">Cancel Request</button>
+		</div> 
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

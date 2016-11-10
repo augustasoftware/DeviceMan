@@ -1,0 +1,47 @@
+<ion-view view-title="Approved Device(s)" class="home">
+	<!--<ion-nav-buttons side="left">-->
+    <!--<button class="button button-icon icon ion-chevron-left" ng-click="goback()"></button>-->
+  <!--</ion-nav-buttons>-->
+	<ion-side-menu view-title="Available Device(s)" side="right" class="main_nav">
+	</ion-side-menu>
+	<ion-content class="request_form approved_device">
+    <div class="device-list pendinglist" ng-repeat="list in getlist">
+      <ion-list ng-click="goto_approvedpage(list.id)" >
+
+        <div class="pendivimg">
+          <img src={{list.imageUrl}} width="34px" height="67px"/>
+
+        </div>
+        <div class="product" >
+
+          <!-- <h1>{{list.userName}}</br> <span>Requested on: {{list.endTime}}</span></h1> -->
+          <h1>{{list.DeviceName}} </h1>  <br>
+          <ul>
+            <li>
+              <span>Requested on: {{list.Date}}</span>
+            </li>
+            <li>
+              <span>Time: Time: {{list.startTime |  date:'MM/dd/yyyy @ h:mma'}}</span>
+            </li>
+          </ul>
+
+        </div>
+
+
+      </ion-list>
+    </div>
+
+
+		<!--<ion-list ng-repeat="list in getlist">-->
+			<!--<div class="list list-inset">-->
+			<!--<ion-item ng-click="goto_approvedpage(list.id)">-->
+				<!--<div class="product">-->
+					<!--<img src={{list.imageUrl}} width="34px" height="67px"/>-->
+					<!--&lt;!&ndash; <h1>{{list.userName}}</br> <span>Approved on:{{list.endTime}}</span></h1> &ndash;&gt;-->
+					<!--<h1>{{list.DeviceName}}</br> <span>Requested on: {{list.Date}}</span> <br><span>Time: {{list.startTime}}-->
+				<!--</div>-->
+			<!--</ion-item>-->
+			<!--</div>-->
+		<!--</ion-list>-->
+	</ion-content >
+</ion-view>
