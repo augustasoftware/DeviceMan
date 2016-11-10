@@ -41,8 +41,9 @@ Now, we need to create a new Cordova project somewhere on the computer for the c
 
 ```js
 $ ionic start todo 
-That will create a folder called todo in the directory the command was run. Next, we will go into that directory and list the contents. Here is what the outer structure of your Ionic project will look like:
 ```
+That will create a folder called todo in the directory the command was run. Next, we will go into that directory and list the contents. Here is what the outer structure of your Ionic project will look like:
+```js
 $ cd todo && ls
 
 ├── bower.json     // bower dependencies
@@ -73,5 +74,5 @@ Just to make sure the default project worked, try building and running the proje
 $ ionic build ios
 $ ionic emulate ios
 ```
-For get our Deviceman app , copy WWW folder and place it your newly created app !!!
+To get our Deviceman app , copy WWW folder and place it your newly created app !!!
 
