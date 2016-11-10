@@ -1,13 +1,16 @@
 
-js# DeviceMan
+#DeviceMan
 
-# Stack
-* Inonic
-
+## About
 The purpose of this app is to monitor the usage of in house materials. The end user who wants to utilize the mobile for some testing can raise a request using this app. It will trigger a notification to the admin and upon his/her approval, the device shall be taken by that user
 
+## Stack
+* Inonic
 
-Installation :
+
+
+
+## Installation
 We are going to walk through the process of downloading Ionic and installing all necessary dependencies for development.
 
 Platform notes
@@ -25,14 +28,15 @@ $ sudo npm install -g cordova
 ```
 Drop sudo from the above command if running on Windows. Depending on the platforms you wish to develop for, you’ll need to install platform-specific tools. Follow the Cordova platform guides for Android and iOS to make sure you have everything needed for development on those platforms. Luckily, you’ll only need to do this once.
 
-Install Ionic
+**Install Ionic**
 Ionic comes with a convenient command line utility to start, build, and package Ionic apps.
 
 To install it, simply run:
 ```js
 $ sudo npm install -g ionic
 ```
-Create the project
+
+**Create the project**
 Now, we need to create a new Cordova project somewhere on the computer for the code for our app:
 
 ```js
@@ -54,13 +58,15 @@ $ cd todo && ls
 ```
 If you are planning on using any version control system, you can go ahead and set it up in this new folder.
 
-Configure Platforms
+**Configure Platforms**
 Now, we need to tell ionic that we want to enable the iOS and Android platforms. Note: unless you are on MacOS, leave out the iOS platform:
+
 ```js
 $ ionic platform add ios
 $ ionic platform add android
 ```
-Test it out
+
+**Test it out**
 Just to make sure the default project worked, try building and running the project (substitute ios for android to build for Android instead):
 
 ```js
