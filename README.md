@@ -5,7 +5,8 @@
 The purpose of this app is to monitor the usage of in house materials. The end user who wants to utilize the mobile for some testing can raise a request using this app. It will trigger a notification to the admin and upon his/her approval, the device shall be taken by that user
 
 ## Stack
-* Inonic
+* Ionic
+* API Connect
 
 
 
